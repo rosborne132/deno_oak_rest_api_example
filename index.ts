@@ -1,16 +1,15 @@
-import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
+import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { getTodos } from './src/controllers'
+import { getFolders, getTodos } from "./src/controllers/index.ts";
 
-export const router = new Router()
+const router = new Router();
 
-router.get('/', context => {
-    context.response.body = 'Hello'
-})
-router.get('/todos', getTodos)
-//     .get('/book', context => {
-//         context.response.body = Array.from(books.values())
-//     })
+router
+  .get("/", (context) => {
+    context.response.body = "Hello";
+  })
+  .get("/todos", getTodos)
+  .get("/folders", getFolders);
 //     .get('/book/:id', context => {
 //         if (
 //             context.params &&
@@ -21,8 +20,8 @@ router.get('/todos', getTodos)
 //         }
 //     })
 
-const app = new Application()
+const app = new Application();
 
-app.use(router.routes())
-app.use(router.allowedMethods())
-await app.listen({ port: 8000 })
+app.use(router.routes());
+app.use(router.allowedMethods());
+await app.listen({ port: 8000 });

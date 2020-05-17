@@ -1,2 +1,2 @@
-export * from './Folders/Folders.ts'
-export * from './Todos/Todos.ts'
+export * from "./Folders/Folders.ts";
+export * from "./Todos/Todos.ts";
