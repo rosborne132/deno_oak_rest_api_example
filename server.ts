@@ -1,38 +1,28 @@
 import { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-import { getFolders, addTodo, getTodos } from "./src/controllers/index.ts";
+import {
+  addTodo,
+  deleteTodo,
+  getTodo,
+  getTodos,
+  updateTodo,
+} from "./src/controllers/todos.ts";
 
 const router = new Router();
 const port = 3000;
 
+// Our routes
 router
-  .get("/", (context) => {
-    context.response.body = "Hello";
-  })
   .get("/todos", getTodos)
-  .post("/todos", addTodo)
-  .get("/folders", getFolders);
-//     .get('/book/:id', context => {
-//         if (
-//             context.params &&
-//             context.params.id &&
-//             books.has(context.params.id)
-//         ) {
-//             context.response.body = books.get(context.params.id)
-//         }
-//     })
+  .get("/todos/:id", getTodo)
+  .delete("/todos/:id", deleteTodo)
+  .patch("/todos/:id", updateTodo)
+  .post("/todos", addTodo);
 
 const app = new Application();
 
 app.use(router.routes());
 app.use(router.allowedMethods());
-
-// Logger
-app.use(async (ctx, next) => {
-  await next();
-  const rt = ctx.response.headers.get("X-Response-Time");
-  console.log(`${ctx.request.method} ${ctx.request.url} - ${rt}`);
-});
 
 console.log(`Listening on port ${port}...`);
 

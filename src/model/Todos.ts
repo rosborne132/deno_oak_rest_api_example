@@ -1,28 +1,24 @@
-import { Todo } from "../../types/index.ts";
+import { Todo } from "../types/Todo.ts";
 
 export const Todos: Array<Todo> = [
   {
-    id: "fj3god9d",
+    id: "40238v4ff-3120-3794-6830-dfgkj49gj30df",
     name: "Update resume",
     isComplete: false,
-    folderId: "dflgkj23ig9",
   },
   {
-    id: "sk3jr93jd",
+    id: "3kd90dj2d-7059-5820-1258-goi34j09dfg3",
     name: "Clean room",
     isComplete: false,
-    folderId: "asdfkjhe",
   },
   {
-    id: "2oid02i3",
+    id: "j30vh293g-0192-5832-1082-gj30fj305mc",
     name: "Play games with friends",
     isComplete: true,
-    folderId: "asdfkjhe",
   },
   {
-    id: "sl2kd39dj02",
+    id: "a0s9qk2df90-8069-7069-2130-fj30dkfgh",
     name: "Fix bass guitar",
     isComplete: false,
-    folderId: "23jdvu30gh",
   },
 ];
