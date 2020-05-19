@@ -1,0 +1,3 @@
+# scripts.yaml
+scripts:
+    start: denon server.ts
