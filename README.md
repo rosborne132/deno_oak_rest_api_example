@@ -1,11 +1,11 @@
-# Install Dependencies
+# Oak Example API With Deno
+This is an example REST API built with Deno and Oak. 
+
+## Install Dependencies
 
 Denon
 `deno install -Af --unstable https://deno.land/x/denon/denon.ts`
 
-Velociraptor
-`$ deno install --allow-read --allow-env --allow-run -n vr https://deno.land/x/velociraptor/cli.ts`
-
-# Run Locally
+## Run Locally
 
 `vr start`

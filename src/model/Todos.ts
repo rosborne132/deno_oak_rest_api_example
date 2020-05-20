@@ -18,7 +18,7 @@ export const Todos: Array<Todo> = [
   },
   {
     id: "a0s9qk2df90-8069-7069-2130-fj30dkfgh",
-    name: "Fix bass guitar",
+    name: "Play guitar",
     isComplete: false,
   },
 ];
