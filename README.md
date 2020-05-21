@@ -8,4 +8,4 @@ Denon
 
 ## Run Locally
 
-`vr start`
+`denon`
